@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="@dimen/small_100"
+    android:layout_marginTop="@dimen/small_50"
+    android:layout_marginRight="@dimen/small_100"
+    android:layout_marginBottom="@dimen/small_50"
+    card_view:cardCornerRadius="@dimen/small_50"
+    card_view:cardBackgroundColor="#E0F8F6">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="@dimen/small_100">
+        <ImageView
+            android:id="@+id/img_item_photo"
+            android:layout_width="@dimen/large_250"
+            android:layout_height="@dimen/large_250"
+            android:layout_marginBottom="@dimen/small_50"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_baseline_menu_book_materi_24" />
+        <TextView
+            android:id="@+id/tv_sub_material"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_100"
+            android:layout_marginTop="@dimen/normal_100"
+            android:layout_marginRight="@dimen/normal_100"
+            android:layout_marginBottom="@dimen/small_100"
+            android:layout_toEndOf="@id/img_item_photo"
+            android:layout_toRightOf="@id/img_item_photo"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/subtitle_1"
+            android:textStyle="bold"
+            android:textColor="#045752"
+            tools:text="Sejarah Aksara Lontara" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

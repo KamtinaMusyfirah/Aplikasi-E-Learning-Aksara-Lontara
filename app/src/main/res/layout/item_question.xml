@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/default_text"
+            tools:text="1. ᨕᨉ ᨒᨚᨈᨑ ᨄᨚᨒᨙᨕᨗ ᨑᨗ ᨉᨘᨕᨕᨙ  ᨕᨉ ᨕᨗᨕᨊᨑᨗᨈᨘ  . . ."
+            android:textSize="20sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="@dimen/normal_100"/>
+
+        <ImageView
+            android:id="@+id/iv_question"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="@dimen/normal_100"
+            android:src="@android:color/darker_gray"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_answer_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_answer"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

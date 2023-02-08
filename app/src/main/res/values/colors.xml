@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#7C8DFF</color>
+    <color name="colorPrimaryDark">#333984</color>
+    <color name="colorPrimaryLight">#7C8DFF</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="bg_edit_text">#EFEFEF</color>
+
+    <color name="bg">#045752</color>
+    <color name="bg_muda">#E0F8F6</color>
+</resources>

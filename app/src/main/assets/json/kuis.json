@@ -1,0 +1,872 @@
+[
+  {
+    "id_kuis" : 0,
+    "kuis" : [
+      {
+        "question" : "1. ᨕᨉ ᨒᨚᨈᨑ ᨄᨚᨒᨙᨕᨗ ᨑᨗ ᨉᨘᨕᨕᨙ  ᨕᨉ ᨕᨗᨕᨊᨑᨗᨈᨘ  . . .",
+        "image" : "",
+        "answers" :[
+          {
+            "answer" : "ᨑᨕᨘ ᨊ ᨈ",
+            "correct_answer" : true,
+            "is_click" : false,
+            "option" : "ᨀ"
+          },
+          {
+            "answer" : "ᨑᨕᨘ ᨊ ᨕᨍᨘ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨁ"
+          },
+          {
+            "answer" : "ᨈ ᨊ ᨕᨍᨘᨘ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨂ"
+          },
+          {
+            "answer" : "ᨕᨍᨘ ᨊ ᨅᨈᨘᨘᨘ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨃ"
+          }
+        ]
+      },
+      {
+        "question" : "2. ᨖᨘᨑᨘᨄᨘ ᨒᨚᨈᨑᨕᨙ ᨅᨘᨂᨛ ᨅᨘᨂᨛᨊ ᨑᨗᨄᨕᨗᨔᨛᨂᨂᨗ ᨄᨚᨒᨙ ᨑᨗ  . . .",
+        "image" : "",
+        "answers" :[
+          {
+            "answer" : "ᨀᨑᨕᨙ ᨈᨘᨆᨄᨔᨗᨑᨗ ᨀᨒᨚᨊ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨀ"
+          },
+          {
+            "answer" : "ᨉᨕᨙ ᨄᨆᨈᨙᨘ",
+            "correct_answer" : true,
+            "is_click" : false,
+            "option" : "ᨁ"
+          },
+          {
+            "answer" : "ᨉᨕᨙ ᨆᨈᨋᨙᨘᨘ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨂ"
+          },
+          {
+            "answer" : "ᨀᨑᨕᨙ ᨆᨂᨘᨈᨘᨂᨘᨘᨘᨗ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨃ"
+          }
+        ]
+      },
+      {
+        "question" : "3. ᨕᨄᨚᨂᨛᨊ ᨖᨘᨑᨘᨄᨘ ᨒᨚᨈᨑ ᨆᨊᨕᨗ ᨄᨚᨒᨙ ᨑᨗ ᨖᨘᨑᨘᨄᨘ ᨕᨛᨃᨕᨙ ᨑᨗ . . .",
+        "image" : "",
+        "answers" :[
+          {
+            "answer" : "ᨍᨓᨕᨙ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨀ"
+          },
+          {
+            "answer" : "ᨆᨃᨔᨘ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨁ"
+          },
+          {
+            "answer" : "ᨕᨗᨉᨗᨕᨘᨘ",
+            "correct_answer" : true,
+            "is_click" : false,
+            "option" : "ᨂ"
+          },
+          {
+            "answer" : "ᨔᨘᨆᨈᨛᨑᨘᨘᨘᨗ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨃ"
+          }
+        ]
+      },
+      {
+        "question" : "4. ᨉᨈᨘ ᨑᨗᨅᨉ ᨔᨒᨔᨙᨉᨗ ᨑᨗᨓᨛᨈᨘᨕᨙ ᨊᨕᨙᨒᨕᨘᨕᨗ ᨅᨑᨀᨘᨕᨆᨛᨂᨗ ᨊᨑᨗᨈᨅᨕᨗ ᨔᨙᨉᨗ ᨖᨘᨑᨘᨄᨘ ᨞ ᨖᨘᨑᨘᨄᨘ ᨕᨁ ᨑᨚ . . .",
+        "image" : "",
+        "answers" :[
+          {
+            "answer" : "ᨀ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨀ"
+          },
+          {
+            "answer" : "ᨄ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨁ"
+          },
+          {
+            "answer" : "ᨈᨘᨘ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨂ"
+          },
+          {
+            "answer" : "ᨖ",
+            "correct_answer" : true,
+            "is_click" : false,
+            "option" : "ᨃ"
+          }
+        ]
+      },
+      {
+        "question" : "5. ᨖᨘᨑᨘᨄᨘ ᨒᨚᨈᨑᨕᨙᨑᨚ ᨈᨄᨗᨋᨕᨗ ᨕᨔᨛᨊ ᨆᨏᨍᨗ . . .",
+        "image" : "",
+        "answers" :[
+          {
+            "answer" : "ᨍᨂ ᨍᨂ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨀ"
+          },
+          {
+            "answer" : "ᨔᨘᨒᨄ ᨕᨛᨄ",
+            "correct_answer" : true,
+            "is_click" : false,
+            "option" : "ᨁ"
+          },
+          {
+            "answer" : "ᨅᨗᨒ ᨅᨗᨒᨘᨘ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨂ"
+          },
+          {
+            "answer" : "ᨔᨙᨑ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨃ"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id_kuis" : 1,
+    "kuis" : [
+      {
+        "question" : "1. ᨖᨘᨑᨘᨄᨘ ᨒᨚᨈᨑᨕᨙ ᨕᨔᨒᨙᨊ ᨄᨚᨒᨙ ᨑᨗ ᨄᨗᨒᨚᨔᨚᨄᨗᨊ ᨔᨘᨒᨄ ᨕᨙᨄ ᨓᨒ ᨔᨘᨍᨗ ᨕᨗᨕᨊᨑᨗᨈᨘ . . .",
+        "image" : "",
+        "answers" :[
+          {
+            "answer" : "ᨕᨄᨗ - ᨕᨘᨓᨕᨙ - ᨕᨂᨗ - ᨈᨊ",
+            "correct_answer" : true,
+            "is_click" : false,
+            "option" : "ᨀ"
+          },
+          {
+            "answer" : "ᨕᨂᨗ - ᨕᨘᨓᨕᨙ - ᨒᨂᨗ - ᨈᨊᨘ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨁ"
+          },
+          {
+            "answer" : "ᨕᨄᨗ - ᨒᨂᨗ - ᨈᨊ - ᨕᨂᨗ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨂ"
+          },
+          {
+            "answer" : "ᨑᨘᨄᨘ - ᨕᨄᨗ - ᨒᨂᨗ - ᨕᨂᨘᨘᨘᨗ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨃ"
+          }
+        ]
+      },
+      {
+        "question" : "2. ᨅᨈᨙᨈ ᨆᨘᨀᨗᨕᨗ ᨖᨘᨑᨘᨄᨘ ᨒᨚᨈᨑ ᨑᨗᨄᨆᨘᨒᨕᨗ ᨄᨒᨙ ᨑᨗ . . .",
+        "image" : "",
+        "answers" :[
+          {
+            "answer" : "ᨈᨙᨂ ᨊᨕᨗᨊᨄ ᨒᨕᨚ ᨑᨗ ᨕᨓ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨀ"
+          },
+          {
+            "answer" : "ᨕᨔᨛ ᨊᨕᨗᨊᨄ ᨒᨕᨚ ᨑᨗ ᨕᨓᨘ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨁ"
+          },
+          {
+            "answer" : "ᨕᨓ ᨊᨕᨗᨊᨄ ᨆᨛᨋᨙᨘ",
+            "correct_answer" : true,
+            "is_click" : false,
+            "option" : "ᨂ"
+          },
+          {
+            "answer" : "ᨈᨙᨂ ᨊᨕᨗᨊᨄ ᨆᨛᨋᨙᨘᨘᨘᨗ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨃ"
+          }
+        ]
+      },
+      {
+        "question" : "3. ᨅᨛᨈᨘᨕ ᨖᨘᨑᨘᨄᨘ ᨒᨚᨈᨑ ᨆᨕᨘᨇᨙ ᨊ ᨆᨊᨗᨄᨗ ᨕᨗᨕᨊᨑᨗᨈᨘ . . .",
+        "image" : "",
+        "answers" :[
+          {
+            "answer" : "ᨕᨈᨘᨕᨚᨂᨙ ᨕᨙᨓᨂᨛᨄ ᨄᨑᨛᨒᨘᨕᨙ ᨕᨘᨔᨖ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨀ"
+          },
+          {
+            "answer" : "ᨕᨈᨘᨕᨚᨂᨙ ᨕᨙᨓᨂᨛᨄ ᨄᨑᨛᨒᨘᨕᨙ ᨄᨙᨂᨚᨑᨙᨅᨊ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨁ"
+          },
+          {
+            "answer" : "ᨕᨈᨘᨕᨚᨂᨙ ᨕᨙᨓᨂᨛᨄ ᨄᨑᨛᨒᨘᨕᨙ ᨕᨙᨒᨕᨘ ᨉᨚᨕ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨂ"
+          },
+          {
+            "answer" : "ᨅᨙᨊ ᨆᨊᨛᨘᨘᨘᨗ",
+            "correct_answer" : true,
+            "is_click" : false,
+            "option" : "ᨃ"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id_kuis" : 2,
+    "kuis" : [
+      {
+        "question" : "1. ᨕᨛᨃ ᨔᨗᨕᨑᨕᨙ ᨕᨑᨙ ᨄᨑᨛᨒᨘ ᨑᨗᨕᨗᨔᨛ ᨑᨗᨕᨚᨒᨚ ᨊᨄ ᨈᨚᨆᨌᨑᨗᨈ ᨕᨗᨕᨊᨑᨗᨈᨘ ᨒᨁᨘ - ᨒᨁᨘᨊ᨞ ᨈᨛᨄᨘ ᨈᨛᨄᨘᨊ ᨞ ᨄᨄᨖᨈ ᨑᨗ ᨌᨑᨗᨈᨕᨙ᨞ ᨊᨛᨊᨗᨕ . . . ",
+        "image" : "",
+        "answers" :[
+          {
+            "answer" : "ᨕᨌᨛᨊᨚᨑᨛᨊ ᨔᨉᨕᨙ",
+            "correct_answer" : true,
+            "is_click" : false,
+            "option" : "ᨀ"
+          },
+          {
+            "answer" : "ᨕᨀᨛᨔᨗᨂᨛ ᨔᨉᨕᨙᨘ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨁ"
+          },
+          {
+            "answer" : "ᨕᨀᨛᨔᨗᨂᨛ ᨈᨙᨄᨘᨈᨙᨄᨘᨊᨗ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨂ"
+          },
+          {
+            "answer" : "ᨄᨄᨖᨈ ᨑᨗ ᨒᨁᨘᨒᨁᨘᨕᨙ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨃ"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id_kuis" : 3,
+    "kuis" : [
+      {
+        "question" : "1. 23 ᨖᨘᨑᨘᨄᨘ ᨒᨚᨈᨑ ᨑᨗ ᨒᨒᨛ ᨅᨔ ᨕᨘᨁᨗᨕᨙ ᨑᨗᨈᨛᨒ . . .",
+        "image" : "",
+        "answers" :[
+          {
+            "answer" : "ᨕᨊ ᨔᨘᨑᨛ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨀ"
+          },
+          {
+            "answer" : "ᨒᨚᨑᨚᨔᨛ ᨕᨉᨘ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨁ"
+          },
+          {
+            "answer" : "ᨕᨗᨊ ᨔᨘᨑᨛ",
+            "correct_answer" : true,
+            "is_click" : false,
+            "option" : "ᨂ"
+          },
+          {
+            "answer" : "ᨈᨋ ᨄᨄᨔᨗᨒᨕᨗᨂᨛᨘᨘᨘ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨃ"
+          }
+        ]
+      },
+      {
+        "question" : "2. ᨉᨗᨅᨌ ᨕᨁᨕᨗ ᨖᨘᨑᨘᨄᨘ “ᨂ” ᨑᨗ ᨒᨒᨛ ᨖᨘᨑᨘᨄᨘ ᨒᨚᨈᨑ . . . ",
+        "image" : "",
+        "answers" :[
+          {
+            "answer" : "Ka",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨀ"
+          },
+          {
+            "answer" : "Gaᨘ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨁ"
+          },
+          {
+            "answer" : "Nga",
+            "correct_answer" : true,
+            "is_click" : false,
+            "option" : "ᨂ"
+          },
+          {
+            "answer" : "Ngkaᨘᨘᨘ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨃ"
+          }
+        ]
+      },
+      {
+        "question" : "3. ᨉᨗᨅᨌ ᨕᨁᨕᨗ ᨖᨘᨑᨘᨄᨘ “ᨖ” ᨑᨗ ᨒᨒᨛ ᨖᨘᨑᨘᨄᨘ ᨒᨚᨈᨑ . . . ",
+        "image" : "",
+        "answers" :[
+          {
+            "answer" : "Sa",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨀ"
+          },
+          {
+            "answer" : "A",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨁ"
+          },
+          {
+            "answer" : "Haᨘᨘ",
+            "correct_answer" : true,
+            "is_click" : false,
+            "option" : "ᨂ"
+          },
+          {
+            "answer" : "Nca",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨃ"
+          }
+        ]
+      },
+      {
+        "question" : "4. ᨉᨗᨅᨌ ᨕᨁᨕᨗ ᨖᨘᨑᨘᨄᨘ “ᨕ” ᨑᨗ ᨒᨒᨛ ᨖᨘᨑᨘᨄᨘ ᨒᨚᨈᨑ . . . ",
+        "image" : "",
+        "answers" :[
+          {
+            "answer" : "Ya",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨀ"
+          },
+          {
+            "answer" : "Wa",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨁ"
+          },
+          {
+            "answer" : "Aᨘᨘ",
+            "correct_answer" : true,
+            "is_click" : false,
+            "option" : "ᨂ"
+          },
+          {
+            "answer" : "Ka",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨃ"
+          }
+        ]
+      },
+      {
+        "question" : "5. ᨉᨗᨅᨌ ᨕᨁᨕᨗ ᨖᨘᨑᨘᨄᨘ “ᨏ” ᨑᨗ ᨒᨒᨛ ᨖᨘᨑᨘᨄᨘ ᨒᨚᨈᨑ . . . ",
+        "image" : "",
+        "answers" :[
+          {
+            "answer" : "Ca",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨀ"
+          },
+          {
+            "answer" : "Ja",
+            "correct_answer" : true,
+            "is_click" : false,
+            "option" : "ᨁ"
+          },
+          {
+            "answer" : "Nya",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨂ"
+          },
+          {
+            "answer" : "Nca",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨃ"
+          }
+        ]
+      },
+      {
+        "question" : "6. ᨉᨗᨅᨌ ᨕᨁᨕᨗ ᨖᨘᨑᨘᨄᨘ “ᨋ” ᨑᨗ ᨒᨒᨛ ᨖᨘᨑᨘᨄᨘ ᨒᨚᨈᨑ . . .",
+        "image" : "",
+        "answers" :[
+          {
+            "answer" : "Nra",
+            "correct_answer" : true,
+            "is_click" : false,
+            "option" : "ᨀ"
+          },
+          {
+            "answer" : "Ta",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨁ"
+          },
+          {
+            "answer" : "Na",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨂ"
+          },
+          {
+            "answer" : "Mpa",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨃ"
+          }
+        ]
+      },
+      {
+        "question" : "7. ᨉᨗᨅᨌ ᨕᨁᨕᨗ ᨖᨘᨑᨘᨄᨘ “ᨉ” ᨑᨗ ᨒᨒᨛ ᨖᨘᨑᨘᨄᨘ ᨒᨚᨈᨑ . . .",
+        "image" : "",
+        "answers" :[
+          {
+            "answer" : "Na",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨀ"
+          },
+          {
+            "answer" : "Da",
+            "correct_answer" : true,
+            "is_click" : false,
+            "option" : "ᨁ"
+          },
+          {
+            "answer" : "Ga",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨂ"
+          },
+          {
+            "answer" : "Ra",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨃ"
+          }
+        ]
+      },
+      {
+        "question" : "8. ᨉᨗᨅᨌ ᨕᨁᨕᨗ ᨖᨘᨑᨘᨄᨘ “ᨒ” ᨑᨗ ᨒᨒᨛ ᨖᨘᨑᨘᨄᨘ ᨒᨚᨈᨑ . . . ",
+        "image" : "",
+        "answers" :[
+          {
+            "answer" : "Ya",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨀ"
+          },
+          {
+            "answer" : "Ra",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨁ"
+          },
+          {
+            "answer" : "La",
+            "correct_answer" : true,
+            "is_click" : false,
+            "option" : "ᨂ"
+          },
+          {
+            "answer" : "Wa",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨃ"
+          }
+        ]
+      },
+      {
+        "question" : "9. ᨉᨗᨅᨌ ᨕᨁᨕᨗ ᨖᨘᨑᨘᨄᨘ “ᨇ” ᨑᨗ ᨒᨒᨛ ᨖᨘᨑᨘᨄᨘ ᨒᨚᨈᨑ . . .",
+        "image" : "",
+        "answers" :[
+          {
+            "answer" : "Pa",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨀ"
+          },
+          {
+            "answer" : "Ba",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨁ"
+          },
+          {
+            "answer" : "Ma",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨂ"
+          },
+          {
+            "answer" : "Mpa",
+            "correct_answer" : true,
+            "is_click" : false,
+            "option" : "ᨃ"
+          }
+        ]
+      },
+      {
+        "question" : "10. ᨉᨗᨅᨌ ᨕᨁᨕᨗ ᨖᨘᨑᨘᨄᨘ “ᨐ” ᨑᨗ ᨒᨒᨛ ᨖᨘᨑᨘᨄᨘ ᨒᨚᨈᨑ . . . ",
+        "image" : "",
+        "answers" :[
+          {
+            "answer" : "Nya",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨀ"
+          },
+          {
+            "answer" : "Nca",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨁ"
+          },
+          {
+            "answer" : "Ya",
+            "correct_answer" : true,
+            "is_click" : false,
+            "option" : "ᨂ"
+          },
+          {
+            "answer" : "A",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨃ"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id_kuis" : 4,
+    "kuis" : [
+      {
+        "question" : "1. ᨍᨘᨆᨛᨒᨊ ᨕᨊ ᨔᨘᨑᨛ ᨕᨗᨕᨊᨑᨗᨈᨘ . . .",
+        "image" : "",
+        "answers" :[
+          {
+            "answer" : "3",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨀ"
+          },
+          {
+            "answer" : "4ᨘ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨁ"
+          },
+          {
+            "answer" : "5ᨘᨘ",
+            "correct_answer" : true,
+            "is_click" : false,
+            "option" : "ᨂ"
+          },
+          {
+            "answer" : "5ᨘᨘᨘ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨃ"
+          }
+        ]
+      },
+      {
+        "question" : "2. “ᨕᨘ” ᨉᨗᨅᨌ  . . .",
+        "image" : "",
+        "answers" :[
+          {
+            "answer" : "A",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨀ"
+          },
+          {
+            "answer" : "I",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨁ"
+          },
+          {
+            "answer" : "U",
+            "correct_answer" : true,
+            "is_click" : false,
+            "option" : "ᨂ"
+          },
+          {
+            "answer" : "E",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨃ"
+          }
+        ]
+      },
+      {
+        "question" : "3. “ ᨕᨛ ” ᨉᨗᨅᨌ . . .",
+        "image" : "",
+        "answers" :[
+          {
+            "answer" : "A",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨀ"
+          },
+          {
+            "answer" : "E",
+            "correct_answer" : true,
+            "is_click" : false,
+            "option" : "ᨁ"
+          },
+          {
+            "answer" : "U",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨂ"
+          },
+          {
+            "answer" : "È",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨃ"
+          }
+        ]
+      },
+      {
+        "question" : "4. “ᨕᨗ” ᨉᨗᨅᨌ . . .",
+        "image" : "",
+        "answers" :[
+          {
+            "answer" : "A",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨀ"
+          },
+          {
+            "answer" : "I",
+            "correct_answer" : true,
+            "is_click" : false,
+            "option" : "ᨁ"
+          },
+          {
+            "answer" : "U",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨂ"
+          },
+          {
+            "answer" : "È",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨃ"
+          }
+        ]
+      },
+      {
+        "question" : "5. “ᨕᨚ” ᨉᨗᨅᨌ . . .",
+        "image" : "",
+        "answers" :[
+          {
+            "answer" : "A",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨀ"
+          },
+          {
+            "answer" : "U",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨁ"
+          },
+          {
+            "answer" : "È",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨂ"
+          },
+          {
+            "answer" : "O",
+            "correct_answer" : true,
+            "is_click" : false,
+            "option" : "ᨃ"
+          }
+        ]
+      },
+      {
+        "question" : "6. “ᨕᨙ” ᨉᨗᨅᨌ . . .",
+        "image" : "",
+        "answers" :[
+          {
+            "answer" : "I",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨀ"
+          },
+          {
+            "answer" : "U",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨁ"
+          },
+          {
+            "answer" : "È",
+            "correct_answer" : true,
+            "is_click" : false,
+            "option" : "ᨂ"
+          },
+          {
+            "answer" : "O",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨃ"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id_kuis" : 5,
+    "kuis" : [
+      {
+        "question" : "1. ᨔᨙᨉᨘ ᨕᨉ ᨑᨗ ᨒᨒᨛ ᨖᨘᨑᨘᨄᨘ ᨒᨚᨈᨑ ᨓᨛᨉᨗ ᨆᨕᨙᨁ . . .",
+        "image" : "",
+        "answers" :[
+          {
+            "answer" : "ᨒᨁᨘᨒᨁᨘᨊ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨀ"
+          },
+          {
+            "answer" : "ᨈᨛᨄᨘᨊ",
+            "correct_answer" : true,
+            "is_click" : false,
+            "option" : "ᨁ"
+          },
+          {
+            "answer" : "ᨕᨘᨀᨗᨊ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨂ"
+          },
+          {
+            "answer" : "ᨕᨘᨊᨗᨊ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨃ"
+          }
+        ]
+      },
+      {
+        "question" : "2. ᨔᨙᨉᨗ ᨄᨚᨊᨙ ᨑᨗ ᨒᨒᨛ ᨄᨚ ᨕᨉ ᨆᨏᨍᨗ ᨄᨄᨔᨗᨒᨕᨗᨂᨛ . . .",
+        "image" : "",
+        "answers" :[
+          {
+            "answer" : "ᨒᨁᨘᨒᨁᨘᨊ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨀ"
+          },
+          {
+            "answer" : "ᨈᨛᨄᨘᨊ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨁ"
+          },
+          {
+            "answer" : "ᨅᨛᨈᨘᨕᨊ",
+            "correct_answer" : true,
+            "is_click" : false,
+            "option" : "ᨂ"
+          },
+          {
+            "answer" : "ᨕᨘᨊᨗᨊ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨃ"
+          }
+        ]
+      },
+      {
+        "question" : "3. ᨕᨛᨃᨈᨚ ᨔᨙᨉᨗ ᨕᨉ ᨄᨉᨕᨗ ᨕᨘᨀᨗᨊ᨞ ᨖᨘᨑᨘᨄᨘᨊ᨞ᨄᨉᨈᨚᨕᨗ ᨈᨛᨄᨘᨊ ᨊᨕᨗᨀᨗᨕ ᨈᨛᨄᨉ ᨅᨛᨈᨘᨕᨊ ᨕᨗᨐᨊᨑᨗᨈᨘ ᨑᨗᨈᨛᨒ . . .",
+        "image" : "",
+        "answers" :[
+          {
+            "answer" : "ᨕᨉ ᨖᨚᨆᨚᨊᨗᨆᨛ",
+            "correct_answer" : true,
+            "is_click" : false,
+            "option" : "ᨀ"
+          },
+          {
+            "answer" : "ᨒᨚᨑᨚᨔᨛ ᨕᨉ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨁ"
+          },
+          {
+            "answer" : "ᨕᨗᨊ ᨔᨘᨑᨛ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨂ"
+          },
+          {
+            "answer" : "ᨕᨊ ᨔᨘᨑᨛ",
+            "correct_answer" : false,
+            "is_click" : false,
+            "option" : "ᨃ"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "440507783493",
+    "project_id": "aplikasi-e-learning-7afdb",
+    "storage_bucket": "aplikasi-e-learning-7afdb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:440507783493:android:bc33dc5b84ec5e6209c62c",
+        "android_client_info": {
+          "package_name": "com.example.aplikasie_learning"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "440507783493-s61a4hb7sptvln018kqa667mpdkvjljf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCq0X6oA280Pr_LePQnFTa5g43ITpcUBG0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "440507783493-s61a4hb7sptvln018kqa667mpdkvjljf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

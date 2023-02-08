@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Beranda" />
+    <item
+        android:id="@+id/translasi"
+        android:icon="@drawable/ic_baseline_translate_24"
+        android:title="Translasi" />
+    <item
+        android:id="@+id/materi"
+        android:icon="@drawable/ic_baseline_menu_book_24"
+        android:title="Materi" />
+    <item
+        android:id="@+id/kuis"
+        android:icon="@drawable/ic_outline_question_answer_24"
+        android:title="Kuis" />
+</menu>

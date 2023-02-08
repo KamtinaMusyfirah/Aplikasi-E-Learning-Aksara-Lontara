@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:textColor="@color/black"
+        android:text="Question No. 1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:scrollbars="vertical"
+        android:background="@color/white"
+        android:inputType="textMultiLine"
+        android:elevation="5dp"
+        android:translationZ="3dp"/>
+
+    <Button
+        android:id="@+id/option_a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textColor="@color/black"
+        android:text="Option A"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:backgroundTint="@color/bg_muda"
+        android:elevation="3dp"
+        android:translationZ="3dp"/>
+
+    <Button
+        android:id="@+id/option_b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textColor="@color/black"
+        android:text="Option B"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:backgroundTint="@color/bg_muda"
+        android:elevation="3dp"
+        android:translationZ="3dp"/>
+
+    <Button
+        android:id="@+id/option_c"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textColor="@color/black"
+        android:text="Option C"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:backgroundTint="@color/bg_muda"
+        android:elevation="3dp"
+        android:translationZ="3dp"/>
+
+    <Button
+        android:id="@+id/option_d"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textColor="@color/black"
+        android:text="Option D"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:backgroundTint="@color/bg_muda"
+        android:elevation="3dp"
+        android:translationZ="3dp"/>
+
+</LinearLayout>
