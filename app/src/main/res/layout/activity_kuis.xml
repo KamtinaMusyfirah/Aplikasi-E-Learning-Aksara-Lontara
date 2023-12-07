@@ -4,19 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.kuis.KuisActivity">
+    android:background="#DEEFEE">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar_kuis"
+        android:id="@+id/appbar_all_kuis"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:gravity="center_vertical"
-        app:elevation="0dp"
         android:background="@android:color/transparent"
+        app:elevation="0dp"
         app:layout_constraintTop_toTopOf="parent">
-        
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/normal_100"
+            android:layout_marginEnd="@dimen/normal_100">
 
+            <ImageButton
+                android:id="@+id/btn_back_all_kuis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:background="@android:color/transparent"
+                android:layout_marginStart="@dimen/normal_100"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_title_kuis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/kuis"
+                android:textColor="@color/black"
+                android:textSize="@dimen/h6"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:textAllCaps="true"
+                android:textAlignment="center"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:letterSpacing="0.2"/>
+
+        </LinearLayout>
     </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_all_kuis"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/small_100"
+        android:paddingTop="@dimen/normal_100"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar_all_kuis"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/item_kuis"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

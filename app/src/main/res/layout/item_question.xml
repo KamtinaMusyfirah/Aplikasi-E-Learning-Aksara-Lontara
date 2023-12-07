@@ -1,41 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:fillViewport="true"
-    android:padding="20dp">
+    android:layout_height="wrap_content"
+    android:background="#DEEFEE">
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/tv_question"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/default_text"
-            tools:text="1. ᨕᨉ ᨒᨚᨈᨑ ᨄᨚᨒᨙᨕᨗ ᨑᨗ ᨉᨘᨕᨕᨙ  ᨕᨉ ᨕᨗᨕᨊᨑᨗᨈᨘ  . . ."
-            android:textSize="20sp"
-            android:lineSpacingExtra="4dp"
-            android:layout_marginBottom="@dimen/normal_100"/>
+            android:layout_margin="16dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="1. ᨕᨉ ᨒᨚᨈᨑ ᨄᨚᨒᨙᨕᨗ ᨑᨗ ᨉᨘᨕᨕᨙ  ᨕᨉ ᨕᨗᨕᨊᨑᨗᨈᨘ  . . . "
+            android:textSize="16px"
+            android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/iv_question"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginBottom="@dimen/normal_100"
-            android:src="@android:color/darker_gray"/>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_answer_question"
-            android:layout_width="match_parent"
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/item_answer"/>
-
-    </LinearLayout>
-
-</androidx.core.widget.NestedScrollView>
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="@dimen/normal_100"
+            android:backgroundTint="@android:color/transparent"
+            android:src="@drawable/ic_baseline_delete_24" />
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

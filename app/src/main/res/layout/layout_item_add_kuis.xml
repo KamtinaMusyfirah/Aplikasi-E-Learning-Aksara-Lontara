@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00796B">
+
+            <TextView
+                android:id="@+id/text_view_judul_kuis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Tambah Judul Kuis"
+                android:textColor="#D4F4F2"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_judul_kuis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:fontFamily="@font/poppins"
+                android:hint="Masukkan judul kuis"
+                android:inputType="textPersonName"
+                android:textColor="#D4F4F2"
+                android:textColorHint="#D3F3F1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_judul_kuis" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_judul_kuis">
+
+                <Button
+                    android:id="@+id/btn_add_title_kuis"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/bg_btn_translate"
+                    android:backgroundTint="#D4F4F2"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Tambahkan"
+                    android:textColor="#00796B"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/et_judul_kuis"
+                    app:layout_constraintStart_toStartOf="@+id/et_judul_kuis"
+                    app:layout_constraintTop_toBottomOf="@+id/et_judul_kuis" />
+
+                <Button
+                    android:id="@+id/btn_cancel_title_kuis"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/bg_btn_translate"
+                    android:backgroundTint="#D4F4F2"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Batal"
+                    android:textColor="#00796B"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/et_judul_kuis"
+                    app:layout_constraintStart_toStartOf="@+id/et_judul_kuis"
+                    app:layout_constraintTop_toBottomOf="@+id/et_judul_kuis" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

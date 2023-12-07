@@ -24,8 +24,9 @@
     <dimen name="large_225">72dp</dimen>
     <dimen name="large_250">80dp</dimen>
 
-    <dimen name="image_course_home_height">160dp</dimen>
-    <dimen name="image_user_profile_normal">40dp</dimen>
+    <dimen name="image_course_home_weight">160dp</dimen>
+    <dimen name="image_course_home_height">165dp</dimen>
+    <dimen name="image_user_profile_normal">50dp</dimen>
     <dimen name="image_user_profile_large">100dp</dimen>
 
     <dimen name="h1">96sp</dimen>
@@ -43,4 +44,7 @@
     <dimen name="overline">10sp</dimen>
     <dimen name="edit_text_height">56dp</dimen>
     <dimen name="edit_text_search_height">48dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
 </resources>

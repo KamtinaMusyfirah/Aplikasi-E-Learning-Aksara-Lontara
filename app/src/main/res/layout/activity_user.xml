@@ -5,6 +5,7 @@
     android:id="@+id/swipe_user"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#DEEFEE"
     tools:context=".presentation.user.UserActivity">
 
     <LinearLayout
@@ -13,36 +14,46 @@
         android:orientation="vertical">
 
         <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar_add_question_admin"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:elevation="0dp"
-            android:background="@android:color/transparent">
+            android:background="@android:color/transparent"
+            app:elevation="0dp"
+            app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:layout_marginStart="@dimen/normal_100"
+                android:orientation="horizontal"
+                android:layout_marginStart="@dimen/small_100"
                 android:layout_marginEnd="@dimen/normal_100">
 
                 <ImageButton
                     android:id="@+id/btn_close_user"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_arrow_back_24"
                     android:background="@android:color/transparent"
-                    android:src="@drawable/ic_baseline_close_24"/>
+                    android:layout_marginStart="@dimen/normal_100"
+                    app:tint="@color/black" />
 
                 <TextView
+                    android:id="@+id/text_view_title_score"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/user_profile"
                     android:textColor="@color/black"
+                    android:textSize="@dimen/body_1"
+                    android:textStyle="bold"
                     android:fontFamily="sans-serif-medium"
-                    android:layout_marginStart="@dimen/normal_100"/>
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:letterSpacing="0.2"/>
 
             </LinearLayout>
-
         </com.google.android.material.appbar.AppBarLayout>
 
         <ScrollView
@@ -73,7 +84,7 @@
                     android:id="@+id/iv_avatar_user"
                     android:layout_width="@dimen/image_user_profile_large"
                     android:layout_height="@dimen/image_user_profile_large"
-                    android:src="@android:color/darker_gray"
+                    android:src="@android:color/white"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="@id/guideline_start"
                     app:layout_constraintEnd_toEndOf="@id/guideline_end"/>

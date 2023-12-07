@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="180dp"
+    android:layout_width="@dimen/image_course_home_weight"
+    app:cardBackgroundColor="@color/bg_muda"
+    android:layout_marginBottom="@dimen/normal_100"
+    android:layout_marginLeft="@dimen/small_100"
+    android:layout_marginRight="@dimen/small_100"
+    app:cardElevation="@dimen/normal_100"
+    app:cardCornerRadius="@dimen/normal_100">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_margin="@dimen/small_100"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image_View"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/quiz"/>
+
+        <TextView
+            android:id="@+id/tv_title_kuis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sejarah Aksara Lontara"
+            android:textSize="@dimen/h6"
+            android:textColor="#045752"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/poppins_bold"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,12 +1,10 @@
 package com.example.aplikasie_learning.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.Filter
 import android.widget.Filterable
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.example.aplikasie_learning.adapter.MaterialsAdapter.*
 import com.example.aplikasie_learning.databinding.ItemMaterialBinding
 import com.example.aplikasie_learning.model.Materials
@@ -54,12 +52,10 @@ class MaterialsAdapter : RecyclerView.Adapter<ViewHolder>(), Filterable{
     class ViewHolder(private val materialBinding: ItemMaterialBinding)
         :RecyclerView.ViewHolder(materialBinding.root){
             fun bindItem(material: Materials, listener: ((Materials, Int) -> Unit)?){
-                Glide.with(itemView)
-                    .load(material.thumbnailMaterial)
-                    .placeholder(android.R.color.darker_gray)
-                    .into(materialBinding.ivMaterial)
 
-                materialBinding.ivTitleMaterial.text = material.titleMaterial
+                materialBinding.tvTitleMaterial.text = material.titleMaterial
+                materialBinding.partMaterial.text = material.partMaterial
+
 
                 listener?.let {
                     itemView.setOnClickListener{

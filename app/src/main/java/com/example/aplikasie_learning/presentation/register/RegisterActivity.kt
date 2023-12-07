@@ -62,7 +62,7 @@ class RegisterActivity : AppCompatActivity() {
         firebaseAuth.createUserWithEmailAndPassword(email, pass)
             .addOnSuccessListener {
                 val uid = it.user?.uid
-                val imageUrl = "https://ui-avatars.com/api/?background=218B5E&color=fff&size=100&rounded=true&name=$name"
+                val imageUrl = "https://ui-avatars.com/api/?background=E0F8F6&color=218580&size=100&rounded=true&bold=true&name=$name"
                 val user = User(
                     uidUser = uid,
                     nameUser = name,

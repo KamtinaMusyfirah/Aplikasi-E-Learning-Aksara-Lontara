@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager.widget.PagerAdapter
-import com.example.aplikasie_learning.databinding.ItemPageBinding
+import com.example.aplikasie_learning.databinding.ItemPageMateriBinding
 import com.example.aplikasie_learning.model.Page
 import com.example.aplikasie_learning.model.PartsPage
 
@@ -22,14 +22,14 @@ class PagesAdapter(private val context: Context): PagerAdapter() {
     override fun isViewFromObject(view: View, `object`: Any): Boolean = view == `object`
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
-        val pageBinding = ItemPageBinding.inflate(LayoutInflater.from(context), container, false)
+        val pageBinding = ItemPageMateriBinding.inflate(LayoutInflater.from(context), container, false)
 
         bindItem(pageBinding, pages[position])
         container.addView(pageBinding.root)
         return pageBinding.root
     }
 
-    private fun bindItem(pageBinding: ItemPageBinding, page: Page){
+    private fun bindItem(pageBinding: ItemPageMateriBinding, page: Page){
         val partsPageAdapter = PartsPageAdapter()
 
         partsPageAdapter.partsPage = page.partsPage as MutableList<PartsPage>

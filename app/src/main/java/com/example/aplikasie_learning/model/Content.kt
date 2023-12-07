@@ -8,6 +8,7 @@ import kotlinx.parcelize.Parcelize
 data class Content(
     @SerializedName("pages")
     val pages: List<Page>? = null,
+
     @SerializedName("id_content")
     val idContent: Int? = null
 ) : Parcelable

@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.aplikasie_learning.databinding.LayoutDialogErrorBinding
 import com.example.aplikasie_learning.databinding.LayoutDialogLoadingBinding
 import com.example.aplikasie_learning.databinding.LayoutDialogSuccessBinding
+import com.example.aplikasie_learning.presentation.allmateri.changepassword.ChangePasswordActivity
 
 fun View.visiable(){visibility = View.VISIBLE}
 fun View.gone(){visibility = View.GONE}

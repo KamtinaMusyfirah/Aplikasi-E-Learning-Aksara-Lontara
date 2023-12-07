@@ -1,2 +1,3 @@
 rootProject.name = "AplikasiE-Learning"
 include ':app'
+include ':crudadmin'

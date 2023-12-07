@@ -5,7 +5,7 @@ import android.os.Bundle
 import com.bumptech.glide.Glide
 import com.example.aplikasie_learning.databinding.ActivityUserBinding
 import com.example.aplikasie_learning.model.User
-import com.example.aplikasie_learning.presentation.changepassword.ChangePasswordActivity
+import com.example.aplikasie_learning.presentation.allmateri.changepassword.ChangePasswordActivity
 import com.example.aplikasie_learning.presentation.login.LoginActivity
 import com.example.aplikasie_learning.utils.showDialogError
 import com.google.firebase.auth.FirebaseAuth
@@ -35,7 +35,7 @@ class UserActivity : AppCompatActivity() {
                 Glide
                     .with(this@UserActivity)
                     .load(it.avatarUser)
-                    .placeholder(android.R.color.darker_gray)
+                    .placeholder(android.R.color.white)
                     .into(userBinding.ivAvatarUser)
             }
         }
@@ -74,7 +74,6 @@ class UserActivity : AppCompatActivity() {
             btnLogoutUser.setOnClickListener {
                 firebaseAuth.signOut()
                 startActivity<LoginActivity>()
-                finishAffinity()
             }
 
             swipeUser.setOnRefreshListener {

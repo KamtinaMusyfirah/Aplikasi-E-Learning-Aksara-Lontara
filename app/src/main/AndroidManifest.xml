@@ -3,100 +3,108 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/ic_baseline_menu_book_materi_24"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/ic_baseline_menu_book_materi_24"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AplikasiELearning"
         tools:targetApi="31">
         <activity
-            android:name=".QuestionActivity"
+            android:name=".presentation.result.ScoreUserActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".KuisActivity"
+            android:name=".presentation.result.ScoreAdminActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".presentation.changepassword.ChangePasswordActivity"
+            android:name=".presentation.detailquestion.DetailQuestionActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".presentation.forgotpassword.ForgotPasswordActivity"
+            android:name=".presentation.question.QuestionNewActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".presentation.register.RegisterActivity"
+            android:name=".presentation.addtitlekuisadmin.AddTitleKuisAdminActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".presentation.login.LoginActivity"
+            android:name=".presentation.addquestionadmin.AddQuestionAdminActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".presentation.translation.TranslationActivity"
+            android:name=".presentation.listquestionadmin.ListQuestionAdminActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".presentation.user.UserActivity"
+            android:name=".presentation.kuis.KuisAdminActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".presentation.content.ContentActivity"
+            android:name=".presentation.main.MainAdminActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity android:name=".presentation.penerjemah.PenerjemahActivity" />
+        <activity android:name=".presentation.result.ResultActivity" />
+        <activity android:name=".presentation.question.QuestionActivity" />
+        <activity android:name=".presentation.allmateri.AllMaterials" />
+        <activity android:name=".presentation.allaksaralontara.AllAksaraLontaraActivity" />
+        <activity android:name=".presentation.kuis.KuisActivity" />
+        <activity android:name=".presentation.allmateri.changepassword.ChangePasswordActivity" />
+        <activity android:name=".presentation.forgotpassword.ForgotPasswordActivity" />
+        <activity android:name=".presentation.register.RegisterActivity" />
+        <activity android:name=".presentation.login.LoginActivity" />
+        <activity android:name=".presentation.user.UserActivity" />
+        <activity android:name=".presentation.content.ContentActivity" />
         <activity
             android:name=".presentation.splash.SplashActivity"
             android:exported="true">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".presentation.main.MainActivity"
-            android:exported="true">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+        <activity android:name=".presentation.main.MainActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

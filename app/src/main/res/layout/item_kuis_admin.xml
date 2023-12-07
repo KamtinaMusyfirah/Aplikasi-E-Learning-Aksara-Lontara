@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="@dimen/image_course_home_height"
+    android:layout_width="@dimen/image_course_home_weight"
+    app:cardBackgroundColor="@color/bg_muda"
+    android:layout_marginBottom="@dimen/normal_100"
+    android:layout_marginLeft="@dimen/normal_100"
+    android:layout_marginRight="@dimen/normal_100"
+    app:cardElevation="@dimen/normal_100"
+    app:cardCornerRadius="@dimen/normal_100"
+    android:id="@+id/cardview_kuis">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_margin="@dimen/normal_100"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/icon_kuis"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/kuis"/>
+
+        <TextView
+            android:id="@+id/tv_title_kuis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sejarah Aksara Lontara"
+            android:textSize="@dimen/h6"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="#045752"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:backgroundTint="@android:color/transparent"
+        android:src="@drawable/ic_baseline_delete_24" />
+
+</androidx.cardview.widget.CardView>

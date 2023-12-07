@@ -29,11 +29,8 @@ class PartsPageAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         : RecyclerView.ViewHolder(markdownBinding.root) {
         fun bindItem(partPage: PartsPage) {
             val css = Github()
-            css.addRule("body", "color:black"
-                , "font-family: sans-serif"
-                , "padding: 0px"
-                , "background-color: #fafafa"
-            )
+            css.addRule("body", "color: black", "font-family: aksaralontara", "padding: 0px", "background-color: #DEEFEE", "font-size: 24px", "word-spacing: 7px")
+            css.addRule("h3", "line-height : 1.8", "font-size: 20px")
             markdownBinding.mdContent.addStyleSheet(css)
             markdownBinding.mdContent.loadMarkdown(partPage.content)
         }
