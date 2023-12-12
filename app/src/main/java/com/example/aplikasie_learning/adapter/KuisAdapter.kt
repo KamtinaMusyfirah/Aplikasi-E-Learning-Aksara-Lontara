@@ -8,17 +8,17 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.aplikasie_learning.databinding.ItemKuisBinding
 import com.example.aplikasie_learning.model.Kuis
 
-class KuisAdapter: RecyclerView.Adapter<KuisAdapter.ViewHolder>(), Filterable {
+class KuisAdapter(private val kuisList : ArrayList<Kuis>): RecyclerView.Adapter<KuisAdapter.ViewHolder>(), Filterable {
 
     private var listener: ((Kuis, Int) -> Unit)? = null
-    var materials = mutableListOf<Kuis>()
+    var kuis = mutableListOf<Kuis>()
         set(value){
             field = value
-            kuisFilter = value
+            kuisFilter = value as ArrayList<Kuis>
             notifyDataSetChanged()
         }
 
-    private  var kuisFilter = mutableListOf<Kuis>()
+    private  var kuisFilter = kuisList
 
     private val filters = object : Filter(){
         override fun performFiltering(constraint: CharSequence?): FilterResults {
@@ -26,9 +26,9 @@ class KuisAdapter: RecyclerView.Adapter<KuisAdapter.ViewHolder>(), Filterable {
             val filterPattern = constraint.toString().trim().lowercase()
 
             if (filterPattern.isEmpty()){
-                filteredList = materials
+                filteredList = kuisList
             }else{
-                for (material in materials){
+                for (material in kuisList){
                     val title = material.titleKuis?.trim()?.lowercase()
 
                     if (title?.contains(filterPattern) == true){
@@ -43,7 +43,7 @@ class KuisAdapter: RecyclerView.Adapter<KuisAdapter.ViewHolder>(), Filterable {
         }
 
         override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
-            kuisFilter = results?.values as MutableList<Kuis>
+            kuisFilter = results?.values as ArrayList<Kuis>
             notifyDataSetChanged()
         }
     }

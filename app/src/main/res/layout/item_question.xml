@@ -25,7 +25,7 @@
             android:layout_margin="16dp"
             android:fontFamily="@font/poppins_bold"
             android:text="1. ᨕᨉ ᨒᨚᨈᨑ ᨄᨚᨒᨙᨕᨗ ᨑᨗ ᨉᨘᨕᨕᨙ  ᨕᨉ ᨕᨗᨕᨊᨑᨗᨈᨘ  . . . "
-            android:textSize="16px"
+            android:textSize="@dimen/h6"
             android:textStyle="bold" />
 
         <ImageView

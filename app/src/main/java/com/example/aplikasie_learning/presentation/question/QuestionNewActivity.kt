@@ -3,12 +3,14 @@ package com.example.aplikasie_learning.presentation.question
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.widget.AppCompatButton
 import com.example.aplikasie_learning.databinding.ActivityQuestionNewBinding
 import com.example.aplikasie_learning.model.Kuis
 import com.example.aplikasie_learning.model.QuestionAdmin
 import com.example.aplikasie_learning.model.ScoreUser
+import com.example.aplikasie_learning.presentation.listquestionadmin.ListQuestionAdminActivity
 import com.example.aplikasie_learning.presentation.result.ResultActivity
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
@@ -28,6 +30,7 @@ class QuestionNewActivity : AppCompatActivity() {
     private lateinit var scoreDatabase : DatabaseReference
     private var questionList = ArrayList<QuestionAdmin>()
     private var currentUser: FirebaseUser? = null
+    private var userUID = ""
     private var position = 0
     private var userCorrect = 0
     private var userWrong = 0
@@ -37,6 +40,7 @@ class QuestionNewActivity : AppCompatActivity() {
     private var kuisTitle: Kuis? = null
     private var username = ""
     private var lastClickedOption: AppCompatButton? = null
+    private var kuisPoistion = 0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,7 +55,17 @@ class QuestionNewActivity : AppCompatActivity() {
 
         getDataFirebase()
         onAction()
-//        checkAnsw()
+        getDataIntent()
+    }
+
+    private fun getDataIntent() {
+        if (intent != null){
+            kuisPoistion = intent.getIntExtra(EXTRA_POSITION,0)
+            val kuisTitle = intent.getParcelableExtra<Kuis>(EXTRA_KUIS)
+
+            questionBinding.tvTitleKuis.text = kuisTitle?.titleKuis
+        }
+
     }
 
     private fun getDataFirebase() {
@@ -105,10 +119,10 @@ class QuestionNewActivity : AppCompatActivity() {
         questionBinding.apply {
             questionBinding.btnNextKuis.setOnClickListener {
                 if (position < questionList.size - 1){
+                    checkAnsw()
                     position++
                     loadNextQuestion()
                     updateCurrentPositionText()
-                    checkAnsw()
                 }else{
                     checkAnsw()
                     totalQuestion = questionList.size
@@ -130,6 +144,10 @@ class QuestionNewActivity : AppCompatActivity() {
                     loadPreviousQuestion()
                     updateCurrentPositionText()
                 }
+            }
+
+            questionBinding.btnCloseKuis.setOnClickListener {
+                finish()
             }
         }
     }
@@ -173,13 +191,17 @@ class QuestionNewActivity : AppCompatActivity() {
 
 
     private fun checkAnsw() {
-        if (lastClickedOption != null) {
-            if (lastClickedOption?.text.toString().equals(questionList[position].answer)) {
+        if (lastClickedOption != null && position >= 0 && position < questionList.size) {
+            val userAnswer = lastClickedOption?.text.toString()
+            val correctAnswer = questionList[position].answer
+            Log.d("AnswerComparison", "User Answer: $userAnswer, Correct Answer: $correctAnswer")
+            if (userAnswer == correctAnswer) {
                 userCorrect++
             } else {
                 userWrong++
             }
         }
+
     }
 
     private fun resetOptionBackgrounds() {
@@ -191,8 +213,8 @@ class QuestionNewActivity : AppCompatActivity() {
 
     private fun sendScore(){
         val user = Firebase.auth.currentUser
-        val userUID = user?.uid
-        userDatabase.child(userUID.toString()).addValueEventListener(object : ValueEventListener{
+        userUID = user?.uid.toString()
+        userDatabase.child(userUID).addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()){
                     username = snapshot.child("name_user").value.toString()
@@ -210,10 +232,10 @@ class QuestionNewActivity : AppCompatActivity() {
 
     private fun sendUserToDatabase() {
         val user = Firebase.auth.currentUser
-
+        userUID = user?.uid.toString()
         val score = ScoreUser(username,totalScore,kuisTitle?.titleKuis.toString())
         user?.let {
-            scoreDatabase.child(kuisTitle?.titleKuis.toString()).push().setValue(score)
+            scoreDatabase.child(kuisTitle?.titleKuis.toString()).child(userUID).setValue(score)
         }
     }
 }

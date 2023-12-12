@@ -1,9 +1,14 @@
 package com.example.aplikasie_learning.presentation.penerjemah
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import com.example.aplikasie_learning.databinding.ActivityPenerjemahBinding
+import com.example.aplikasie_learning.databinding.LayoutDialogPenerjemahanBinding
 import com.example.aplikasie_learning.presentation.main.MainActivity
 import com.google.android.material.textfield.TextInputEditText
 import org.jetbrains.anko.startActivity
@@ -33,7 +38,7 @@ class PenerjemahActivity : AppCompatActivity() {
     private fun onAction() {
         binding.apply {
             btnBackTranslate.setOnClickListener {
-                startActivity<MainActivity>()
+                finish()
             }
 
             btnTranslate.setOnClickListener {
@@ -47,6 +52,7 @@ class PenerjemahActivity : AppCompatActivity() {
         val inputStream : InputStream = assets.open("csv/corpus.csv")
         val reader = BufferedReader(InputStreamReader(inputStream))
         val csvHeaders = reader.readLine().split(",")
+        var foundMatch = false // Menandakan apakah ada kecocokan atau tidak
 
         var line: String?
         while (reader.readLine().also { line = it } != null) {
@@ -56,11 +62,17 @@ class PenerjemahActivity : AppCompatActivity() {
             val output = kmpReplace(text, pattern, replacement)
             if (replacement == output) {
                 tvOutputLatin.text = output
+                foundMatch = true
             }
         }
         reader.close()
 
-        translateArti(tvOutputLatin.text.toString())
+        if (!foundMatch) {
+            // Menampilkan alert karena tidak ada kecocokan
+            showAlertDialog("Kata \"$text\" yang anda cari tidak ditemukan \nSilahkan cari kata lain \natau periksa dengan baik kata yang anda masukkan")
+        } else {
+            translateArti(tvOutputLatin.text.toString())
+        }
     }
 
     private fun translateArti(latin: String) {
@@ -79,7 +91,24 @@ class PenerjemahActivity : AppCompatActivity() {
                 tvOutputArti.text = output
             }
         }
+
         reader.close()
+    }
+
+    private fun showAlertDialog(message: String?) {
+        val dialogOke = LayoutDialogPenerjemahanBinding.inflate(layoutInflater)
+        val dialogView = AlertDialog.Builder(this)
+            .setView(dialogOke.root)
+
+        val alertDialog = dialogView.show()
+        alertDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        var tvMessage = dialogOke.tvMessage
+
+        tvMessage.text = message
+
+        dialogOke.btnOke.setOnClickListener {
+            alertDialog.dismiss()
+        }
     }
 
     fun kmpReplace(text: String, pattern: String, replacement: String): String {

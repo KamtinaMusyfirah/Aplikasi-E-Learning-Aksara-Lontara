@@ -27,7 +27,7 @@
                 android:id="@+id/btn_close_kuis"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_close_24"
+                android:src="@drawable/ic_baseline_arrow_back_24"
                 android:background="@android:color/transparent"
                 app:tint="@color/black" />
 

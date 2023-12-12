@@ -119,13 +119,14 @@ class MainActivity : AppCompatActivity() {
     private var listenerKuis = object : ValueEventListener{
         override fun onDataChange(snapshot: DataSnapshot) {
             hideLoading()
-            if (snapshot.value != null){
+            if (snapshot.exists()){
+                kuisList.clear()
                 showData()
-                val json = Gson().toJson(snapshot.value)
-                val type = object : TypeToken<MutableList<Kuis>>() {}.type
-                val kuis = Gson().fromJson<MutableList<Kuis>>(json, type)
-
-                kuis?.let { kuisAdapter.materials = it }
+                for (kuisSnap in snapshot.children){
+                    val kuisData = kuisSnap.getValue(Kuis::class.java)
+                    kuisList.add(kuisData!!)
+                }
+                kuisAdapter.notifyDataSetChanged()
             }else{
                 showEmptyData()
             }
@@ -170,7 +171,7 @@ class MainActivity : AppCompatActivity() {
         materialDatabase = FirebaseDatabase.getInstance().getReference("materials")
         kuisDatabase = FirebaseDatabase.getInstance().getReference("kuisAdmin")
         kuisList = arrayListOf<Kuis>()
-        kuisAdapter = KuisAdapter()
+        kuisAdapter = KuisAdapter(kuisList)
         currentUser = FirebaseAuth.getInstance().currentUser
         aksaraLontaraAdapter = AksaraLontaraAdapter()
         aksaraLontaraDatabase = FirebaseDatabase.getInstance().getReference("aksaraLontara")

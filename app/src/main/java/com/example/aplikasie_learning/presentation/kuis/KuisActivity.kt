@@ -4,10 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.example.aplikasie_learning.adapter.KuisAdapter
+import com.example.aplikasie_learning.adapter.KuisAdminAdapter
 import com.example.aplikasie_learning.databinding.ActivityKuisBinding
 import com.example.aplikasie_learning.model.Kuis
 import com.example.aplikasie_learning.presentation.question.QuestionNewActivity
-import com.example.aplikasie_learning.utils.showDialogError
+import com.example.aplikasie_learning.utils.*
 import com.google.firebase.database.*
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -27,7 +28,7 @@ class KuisActivity : AppCompatActivity() {
 
         // Init
         kuisList = arrayListOf<Kuis>()
-        kuisAdapter = KuisAdapter()
+        kuisAdapter = KuisAdapter(kuisList)
         kuisDatabase = FirebaseDatabase.getInstance().getReference("kuisAdmin")
 
         getDataFirebase()
@@ -50,12 +51,30 @@ class KuisActivity : AppCompatActivity() {
 
     private var listenerMaterials = object : ValueEventListener {
         override fun onDataChange(snapshot: DataSnapshot) {
-            if (snapshot.value != null){
-                val json = Gson().toJson(snapshot.value)
-                val type = object : TypeToken<MutableList<Kuis>>() {}.type
-                val kuis = Gson().fromJson<MutableList<Kuis>>(json, type)
+            if (snapshot.exists()){
+                kuisList.clear()
+                showData()
+                for (kuisSnap in snapshot.children){
+                    val kuisData = kuisSnap.getValue(Kuis::class.java)
+                    kuisList.add(kuisData!!)
+                }
+                kuisAdapter.notifyDataSetChanged()
+            }else{
+                showEmptyData()
+            }
+        }
 
-                kuis?.let { kuisAdapter.materials = it }
+        private fun showData() {
+            kuisBinding.apply {
+                ivEmptyData.gone()
+                rvAllKuis.visiable()
+            }
+        }
+
+        private fun showEmptyData() {
+            kuisBinding.apply {
+                ivEmptyData.visiable()
+                rvAllKuis.gone()
             }
         }
 

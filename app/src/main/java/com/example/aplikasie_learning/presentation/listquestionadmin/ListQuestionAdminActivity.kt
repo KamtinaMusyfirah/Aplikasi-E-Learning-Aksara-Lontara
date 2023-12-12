@@ -48,7 +48,6 @@ class ListQuestionAdminActivity : AppCompatActivity() {
 
         override fun onCancelled(error: DatabaseError) {
             Log.e("MainActivity", "[OnCancelled] - ${error.message}")
-            showDialogError(this@ListQuestionAdminActivity, error.message)
         }
 
     }

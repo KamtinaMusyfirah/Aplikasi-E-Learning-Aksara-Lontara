@@ -96,6 +96,11 @@ class AddQuestionAdminActivity : AppCompatActivity() {
         addQuestionAdminBinding.apply {
             btnUploadQuestion.setOnClickListener {
                 saveQuestionData()
+                addQuestionAdminBinding.etOption1.text.clear()
+                addQuestionAdminBinding.etOption2.text.clear()
+                addQuestionAdminBinding.etOption3.text.clear()
+                addQuestionAdminBinding.etOption4.text.clear()
+                addQuestionAdminBinding.inputQuestion.text.clear()
             }
             btnCloseQuestionAdmin.setOnClickListener {
                 finish()
@@ -105,6 +110,7 @@ class AddQuestionAdminActivity : AppCompatActivity() {
                     KuisAdminActivity.EXTRA_ID to questionId
                 )
             }
+
         }
     }
 
