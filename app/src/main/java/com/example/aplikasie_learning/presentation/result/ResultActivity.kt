@@ -6,6 +6,7 @@ import com.example.aplikasie_learning.databinding.ActivityResultBinding
 import com.example.aplikasie_learning.presentation.main.MainActivity
 import org.jetbrains.anko.startActivity
 import com.example.aplikasie_learning.R
+import com.example.aplikasie_learning.presentation.kuis.KuisActivity
 
 class ResultActivity : AppCompatActivity() {
 
@@ -63,7 +64,7 @@ class ResultActivity : AppCompatActivity() {
     private fun onAction() {
         resultBinding.apply {
             btnCloseScore.setOnClickListener {
-                startActivity<MainActivity>()
+                startActivity<KuisActivity>()
             }
         }
     }

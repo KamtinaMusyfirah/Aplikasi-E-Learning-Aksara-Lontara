@@ -49,29 +49,40 @@ class PenerjemahActivity : AppCompatActivity() {
 
     fun translateLatin() {
         val text = editTextLontara.text.toString().trim()
+        val words = text.split("\\s+".toRegex())
         val inputStream : InputStream = assets.open("csv/corpus.csv")
         val reader = BufferedReader(InputStreamReader(inputStream))
         val csvHeaders = reader.readLine().split(",")
-        var foundMatch = false // Menandakan apakah ada kecocokan atau tidak
+        var foundMatch = false
+        val listOfResults = mutableListOf<String>()
 
-        var line: String?
-        while (reader.readLine().also { line = it } != null) {
-            val row = line!!.split(",").toTypedArray()
-            val pattern = row[csvHeaders.indexOf("aksara_lontara")]
-            val replacement = row[csvHeaders.indexOf("aksara_latin")]
-            val output = kmpReplace(text, pattern, replacement)
-            if (replacement == output) {
-                tvOutputLatin.text = output
-                foundMatch = true
+        for (word in words) {
+            var line: String?
+            while (reader.readLine().also { line = it } != null) {
+                val row = line!!.split(",").toTypedArray()
+                val pattern = row[csvHeaders.indexOf("aksara_lontara")]
+                val replacement = row[csvHeaders.indexOf("aksara_latin")]
+                val output = kmpReplace(word, pattern, replacement)
+                if (replacement == output) {
+                    listOfResults.add(output)
+                    foundMatch = true
+                    break
+                }
             }
+            inputStream.reset()
         }
         reader.close()
 
         if (!foundMatch) {
-            // Menampilkan alert karena tidak ada kecocokan
-            showAlertDialog("Kata \"$text\" yang anda cari tidak ditemukan \nSilahkan cari kata lain \natau periksa dengan baik kata yang anda masukkan")
+            showAlertDialog("Kata \"$text\" yang anda cari tidak ditemukan " +
+                    "\nSilahkan cari kata lain " +
+                    "\natau periksa dengan baik kata yang anda masukkan")
         } else {
-            translateArti(tvOutputLatin.text.toString())
+            val finalSentence = listOfResults.joinToString(" ")
+            tvOutputLatin.text = finalSentence
+            translateArti(finalSentence)
+
+            Log.d("text", "text yang sudah di split $finalSentence")
         }
     }
 
@@ -79,20 +90,36 @@ class PenerjemahActivity : AppCompatActivity() {
         val inputStream : InputStream = assets.open("csv/corpus2.csv")
         val reader = BufferedReader(InputStreamReader(inputStream))
         val csvHeaders = reader.readLine().split(",")
+        var foundMatch = false // Menandakan apakah ada kecocokan atau tidak
 
-        var line: String?
-        while (reader.readLine().also { line = it } != null) {
-            val row = line!!.split(",").toTypedArray()
-            val pattern = row[csvHeaders.indexOf("aksara_latin")]
-            val replacement = row[csvHeaders.indexOf("arti")]
-            val output = kmpReplace(latin, pattern, replacement)
+        // Create a list to store KMP results
+        val listOfResults = mutableListOf<String>()
 
-            if (replacement == output) {
-                tvOutputArti.text = output
+        val latinWords = latin.split("\\s+".toRegex())
+
+        for (latinWord in latinWords) {
+            var line: String?
+            while (reader.readLine().also { line = it } != null) {
+                val row = line!!.split(",").toTypedArray()
+                val pattern = row[csvHeaders.indexOf("aksara_latin")]
+                val replacement = row[csvHeaders.indexOf("arti")]
+                val output = kmpReplace(latinWord, pattern, replacement)
+
+                if (replacement == output) {
+                    listOfResults.add(output)
+                    foundMatch = true
+                    break
+                }
             }
+            inputStream.reset()
+        }
+        reader.close()
+
+        if (foundMatch) {
+            val finalSentence = listOfResults.joinToString(" ")
+            tvOutputArti.text = finalSentence
         }
 
-        reader.close()
     }
 
     private fun showAlertDialog(message: String?) {
@@ -117,7 +144,7 @@ class PenerjemahActivity : AppCompatActivity() {
         }
 
         fun buildKmpTable(pattern: String): IntArray {
-            val table = IntArray(pattern.length)
+            val table = IntArray(pattern.length) {0}
             var i = 0
             var j = 1
             while (j < pattern.length) {
@@ -125,13 +152,18 @@ class PenerjemahActivity : AppCompatActivity() {
                     i++
                     table[j] = i
                     j++
-                } else if (i > 0) {
-                    i = table[i - 1]
                 } else {
-                    table[j] = 0
-                    j++
+                    if (i > 0) {
+                        i = table[i - 1]
+                    } else {
+                        table[j] = 0
+                        j++
+                    }
                 }
             }
+            Log.d("KMP_TABLE_PATTERN", "pattern : $pattern")
+            Log.d("KMP_TABLE_TEXT", "text : $text")
+            Log.d("KMP_TABLE", "Table at step $j: ${table.joinToString()}")
             return table
         }
 
