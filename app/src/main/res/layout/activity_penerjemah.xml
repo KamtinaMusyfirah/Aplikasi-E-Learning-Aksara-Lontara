@@ -94,18 +94,6 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/text_view_aturan"
-            android:layout_width="368dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/normal_100"
-            android:fontFamily="@font/poppins"
-            android:text="@string/aturan"
-            android:textColor="@color/bg"
-            android:textSize="@dimen/caption"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_translate" />
-
         <Button
             android:id="@+id/btn_translate"
             android:layout_width="150dp"
