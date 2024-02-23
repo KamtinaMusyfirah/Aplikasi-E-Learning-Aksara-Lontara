@@ -48,6 +48,8 @@ class PenerjemahActivity : AppCompatActivity() {
     }
 
     fun translateLatin() {
+        val startTime = System.currentTimeMillis()
+
         val text = editTextLontara.text.toString().trim()
         val words = text.split("\\s+".toRegex())
         val inputStream : InputStream = assets.open("csv/corpus.csv")
@@ -60,9 +62,9 @@ class PenerjemahActivity : AppCompatActivity() {
             var line: String?
             while (reader.readLine().also { line = it } != null) {
                 val row = line!!.split(",").toTypedArray()
-                val pattern = row[csvHeaders.indexOf("aksara_lontara")]
+                val teks = row[csvHeaders.indexOf("aksara_lontara")]
                 val replacement = row[csvHeaders.indexOf("aksara_latin")]
-                val output = kmpReplace(word, pattern, replacement)
+                val output = kmpReplace(word, teks, replacement)
                 if (replacement == output) {
                     listOfResults.add(output)
                     foundMatch = true
@@ -83,16 +85,21 @@ class PenerjemahActivity : AppCompatActivity() {
             translateArti(finalSentence)
 
             Log.d("text", "text yang sudah di split $finalSentence")
+
+            val endTime = System.currentTimeMillis() // Waktu akhir
+            val timeTranslateLatin = endTime - startTime // Selisih waktu dalam milidetik
+            Log.d("TranslationTime", "Total waktu terjemahan Latin: $timeTranslateLatin ms")
         }
     }
 
     private fun translateArti(latin: String) {
+        val startTime = System.currentTimeMillis() // Waktu awal
+
         val inputStream : InputStream = assets.open("csv/corpus2.csv")
         val reader = BufferedReader(InputStreamReader(inputStream))
         val csvHeaders = reader.readLine().split(",")
-        var foundMatch = false // Menandakan apakah ada kecocokan atau tidak
+        var foundMatch = false
 
-        // Create a list to store KMP results
         val listOfResults = mutableListOf<String>()
 
         val latinWords = latin.split("\\s+".toRegex())
@@ -101,9 +108,9 @@ class PenerjemahActivity : AppCompatActivity() {
             var line: String?
             while (reader.readLine().also { line = it } != null) {
                 val row = line!!.split(",").toTypedArray()
-                val pattern = row[csvHeaders.indexOf("aksara_latin")]
+                val teks = row[csvHeaders.indexOf("aksara_latin")]
                 val replacement = row[csvHeaders.indexOf("arti")]
-                val output = kmpReplace(latinWord, pattern, replacement)
+                val output = kmpReplace(latinWord, teks, replacement)
 
                 if (replacement == output) {
                     listOfResults.add(output)
@@ -118,6 +125,11 @@ class PenerjemahActivity : AppCompatActivity() {
         if (foundMatch) {
             val finalSentence = listOfResults.joinToString(" ")
             tvOutputArti.text = finalSentence
+
+            val endTime = System.currentTimeMillis() // Waktu akhir
+            val timeTranslateArti = endTime - startTime // Selisih waktu dalam milidetik
+
+            Log.d("TranslationTime", "Total waktu terjemahan Arti: $timeTranslateArti ms")
         }
 
     }
